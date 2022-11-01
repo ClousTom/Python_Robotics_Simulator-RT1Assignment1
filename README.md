@@ -2,7 +2,45 @@ Python Robotics Simulator
 ================================
 
 This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
-Some of the arenas and the exercises have been modified for the Research Track I course
+
+Pseudo-code
+----------------------
+
+i=False
+While True:
+ If the robot took all the blocks:
+	 The program stops
+
+ If i==False:
+	 Take the coordinate of the closest SILVER block untaken
+ else if i==True:
+	 Take the coordinate of the closest GOLDEN block untaken
+
+ If no blocks found:
+	 Turn_right
+ else if the SILVER block is near and i==False:
+	 Grab the SILVER block
+	 Back_off
+	 Add the block offset in the Array of blocks taken
+	 Turn_right
+	 Set i=True
+ else if the GOLDEN block is near and i==True:
+	 Release the SILVER block near the GOLDEN one
+	 Back_off
+	 Add the block offset in the Array of blocks taken
+	 Turn_right
+	 Set i=False
+ else if the new block is right in front of the robot:
+	 Go_straight
+ else if the new block is to the right of the robot:
+	 Turn_right
+ else if the new block is to the left of the robot:
+	 Turn_left
+	
+
+
+
+
 
 Installing and running
 ----------------------
