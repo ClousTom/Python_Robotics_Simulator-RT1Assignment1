@@ -22,7 +22,7 @@ is through your distribution’s package manager (but PyPyBox2D is only availabl
 
 Now open a terminal shell, move to the robot-sim directory and run:
 ```bash
-$ python2 run.py exercise1.py
+$ python2 run.py assignment.py
 ```
 
 If everything works, you should see a mobile robot and some boxes.
