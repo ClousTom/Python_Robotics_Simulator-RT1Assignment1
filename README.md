@@ -5,9 +5,11 @@ This is a simple, portable robot simulator developed by [Student Robotics](https
 Installing and Running
 ----------------------
 Open a shell and execute the following command:
+,,,bash
 $ sudo apt-get udpate
 $ sudo apt-get install git
-$ git clone https://github.com/CarmineD8/python_simulator
+$ git clone https://github.com/S5630055/Research-Track---Assignment
+,,,
 
 You have downloaded a simple robotic simulator. In order to run it, you should first install:
 $ sudo apt-get install python-dev python-pip python-pygame
