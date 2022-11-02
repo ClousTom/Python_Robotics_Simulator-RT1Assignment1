@@ -14,7 +14,7 @@ Open a shell and execute the following command:
 ```bash
 $ sudo apt-get udpate
 $ sudo apt-get install git
-$ git clone https://github.com/S5630055/Research-Track---Assignment
+$ git clone https://github.com/S5630055/Research-Track---Assignment-1
 ```
 
 You have downloaded a simple robotic simulator. In order to run it, you should first install:
