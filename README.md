@@ -2,6 +2,25 @@ Python Robotics Simulator (Assignment 1)
 ================================
 This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 
+Installing and Running
+----------------------
+Open a shell and execute the following command:
+$ sudo apt-get udpate
+$ sudo apt-get install git
+$ git clone https://github.com/CarmineD8/python_simulator
+
+You have downloaded a simple robotic simulator. In order to run it, you should first install:
+$ sudo apt-get install python-dev python-pip python-pygame
+$ sudo pip install pypybox2d
+
+Indeed, the simulator requires three libraries: pygame, PyPyBox2D, and PyYAML. The easiest way to install these
+is through your distribution’s package manager (but PyPyBox2D is only available through pip).
+
+Now open a terminal shell, move to the robot-sim directory and run:
+
+$ python2 run.py exercise1.py
+
+If everything works, you should see a mobile robot and some boxes.
 
 Pseudocode
 ----------------------
