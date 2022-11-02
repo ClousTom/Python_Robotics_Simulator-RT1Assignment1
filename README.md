@@ -32,7 +32,7 @@ $ python2 run.py assignment.py
 ```
 If everything works, you should see a mobile robot and some boxes.
 
-If you get some error, try in this way:
+If you get some <strong>error</strong>, try in this way:
 -download and install pip for python2:
 ```bash
 $ curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
