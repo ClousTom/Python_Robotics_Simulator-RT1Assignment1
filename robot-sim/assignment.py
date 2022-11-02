@@ -53,7 +53,7 @@ def check_closest_token(color):
                 dist = token.dist
                 angle = token.rot_y
                 tokenOffSet = token.info.offset
-    elif (color=="silver"): #for silver blocks
+    else: #for silver blocks
         for token in R.see():
             if (token.dist < dist and token.info.marker_type==MARKER_TOKEN_SILVER and check_grapped_tokens(token.info.offset)==False):
                 dist = token.dist
@@ -73,7 +73,7 @@ while True:
 
     if (i==False): # switching between silver and golden blocks 
         dist, angle, tokenOffSet = check_closest_token("silver")
-    elif (i==True):
+    else:
         dist, angle, tokenOffSet = check_closest_token("gold")
 
     if (dist==-9): #if there is no one block in the robot's field of view, the robot goes on turning right.
@@ -101,7 +101,7 @@ while True:
         i=False
 
     elif (-a_th<= angle <= a_th): # if the robot is well aligned with the token, we go forward
-        print("Going forward.")
+        print("Going straight.")
         drive(30, 0.2)
     elif (angle < -a_th): # if the robot is not well aligned with the token, we move it on the left or on the right
         print("Turning left.")
