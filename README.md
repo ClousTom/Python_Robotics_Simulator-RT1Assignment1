@@ -5,7 +5,7 @@ This is a simple, portable robot simulator developed by [Student Robotics](https
 
 Pseudocode
 ----------------------
-![Screenshot from 2022-11-02 20-03-46](https://user-images.githubusercontent.com/117213899/199579228-748df8e6-7215-4a99-a9a9-faff9f403c9a.png)
+![Screenshot from 2022-11-02 20-03-46](https://user-images.githubusercontent.com/117213899/199579402-8467d252-ae96-4d0c-b437-538268a7a320.png)
 
 Flowchart
 ----------------------
