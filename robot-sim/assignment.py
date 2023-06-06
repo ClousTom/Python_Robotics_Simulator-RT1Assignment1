@@ -11,7 +11,7 @@ a_th = 2.0 #Threshold for the control of the orientation
 d_ths = 0.4 #Threshold for the control of the linear distance
 d_thg = 0.6 #Threshold for the release of a silver block near a golden block
 grapped_tokens = [] #Array to save the offset of blocks taken
-
+start_time = time.time()
 
 #Drive the robot forward
 def drive(speed, seconds):
@@ -68,7 +68,9 @@ def check_closest_token(color):
 i=False #Variable to switch between searching for gold or silver blocks
 while True:
     if (len(grapped_tokens)==12): #if the robot have taken all the 12 blocks, the program stops
-        print("Goal achieved.")
+        end_time = time.time()
+        total_time = end_time - start_time
+        print("Goal achieved. Total time: ", total_time)
         exit()
 
     if (i==False): # switching between silver and golden blocks 
@@ -78,11 +80,11 @@ while True:
 
     if (dist==-9): #if there is no one block in the robot's field of view, the robot goes on turning right.
         print("The is no one block in the robot's field of view.")
-        turn(20,0.2)
+        turn(30,0.1)
 
     elif (dist < d_ths and i==False): #if we are close to the silver token, we grab it.
         R.grab() 
-        drive(-40,0.5)
+        drive(-300,0.2)
         add_token_to_list(tokenOffSet)
         # print(len(grapped_tokens))
         # print(grapped_tokens)
@@ -92,20 +94,20 @@ while True:
 
     elif (dist < d_thg and i==True): #if we are close to the golden token, we release the silver one.
         R.release()
-        drive(-50,0.5)
+        drive(-300, 0.2)
         add_token_to_list(tokenOffSet)
         # print(len(grapped_tokens))
         # print(grapped_tokens)
         print("The robot is free.")
-        turn(50,1)
+        turn(50,0.5)
         i=False
 
     elif (-a_th<= angle <= a_th): # if the robot is well aligned with the token, we go forward
         print("Going straight.")
-        drive(30, 0.2)
+        drive(100, 0.1)
     elif (angle < -a_th): # if the robot is not well aligned with the token, we move it on the left or on the right
         print("Turning left.")
-        turn(-5, 0.2)
+        turn(-10, 0.1)
     elif (angle > a_th):
         print("Turning right.")
-        turn(+5, 0.2)
+        turn(+10, 0.1)
