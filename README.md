@@ -1,4 +1,4 @@
-Python Robotics Simulator (Assignment 1)
+Python Robotics Simulator (Assignment 1 for Research Track I)
 ================================
 This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 
