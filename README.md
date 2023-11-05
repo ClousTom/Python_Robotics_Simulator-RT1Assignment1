@@ -2,6 +2,8 @@ Python Robotics Simulator (Assignment 1)
 ================================
 This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 
+In the simulator, the robot goes in search of the gold cubes, picks them up and brings them close to the silver cubes.
+
 Installing and Running
 ----------------------
 Install python2:
